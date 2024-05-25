@@ -20,7 +20,7 @@ preferences_filter %>% select(Age, Sex, Preference, Control) %>% report() # Де
 table(preferences_filter$Preference)
 observed <- c(37, 37, 55, 40)
 
-# Двухсторонний бинаминальный тест для кадого типа сообщения
+# Двухсторонний бинаминальный тест для каждого типа сообщений
 type1 <- binom.test(x = 37, n = 169, p =.25) # Тип №1 // p-value = 0.376 // non-significant
 type2 <- binom.test(x = 37, n = 169, p =.25) # Тип №2 // p-value = 0.376 // non-significant
 type3 <- binom.test(x = 55, n = 169, p =.25) # Тип №3 // p-value = 0.026 // significant
